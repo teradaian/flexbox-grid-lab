@@ -1,6 +1,6 @@
 html {
     box-sizing: border-box
-  }
+}
 
 *, 
 *::before,
@@ -14,8 +14,7 @@ html {
   
 body {
     background-color: #0f5f60;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-      Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+    font-family: 'Open Sans', sans-serif;
     margin: 0;
     min-height: 100vh;
     display: flex;
@@ -57,7 +56,7 @@ main {
 }
 
 #profile-photo {
-  margin: 12px 0 -12px 65px;
+  margin: 10px 0 -12px 70px;
   width: 140px;
   height: 140px;
   object-fit: cover;
@@ -75,8 +74,6 @@ main {
 
 .rating {
   display: flex;
-  align-content: center;
-  justify-content: center;
   height: 100%;
   flex-direction: column;
   background: rgb(240, 240, 240);
@@ -85,8 +82,23 @@ main {
   grid-area: rating;
 }
 
+.stars {
+  color: #f7dd2e;
+  margin-top: 15px;
+  margin-bottom: -16px;
+}
+
+#star-outline {
+  color: lightgray;
+}
+
 .rating p:first-child {
+  font-weight: 200;
   margin: 10px 0 -15px 0;
+}
+
+.about {
+  display:none;
 }
 
 .price {
@@ -94,8 +106,7 @@ main {
   display: flex;
   flex-direction: column;
   text-align: center;
-  justify-content: center;
-  align-items: center;
+  grid-area: price;
 }
 
 .price h2 {
@@ -111,24 +122,26 @@ main {
 
 .message {
   display: flex;
-  height: 101%;
+  height: 100%;
   grid-area: message;
+  font-size: 4rem;
+}
+
+.phone, 
+.text {
+  text-align: center;
+  align-content: center;
+  font-size: 6.5rem;
+  width: 50%;
+  color: white;
 }
 
 .phone {
-  text-align: center;
-  align-items: center;
-  justify-content: center;
   background:#66d189;
-  width: 50%;
 }
 
 .text {
-  text-align: center;
-  align-items: center;
-  justify-content: center;
   background: #5abd7c;
-  width: 50%;
 }
 
 
@@ -139,14 +152,102 @@ main {
     justify-content: center;
     align-items: center;
     width: 600px;
-    height: 400px;
+    height: 350px;
     background: white;
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 3fr 1fr;
+    grid-template-columns: 2.5fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
-    "photo" "photo"
-    "photo" "photo"
-    "message" "message"
+    "photo name name name name"
+    "photo rating rating rating rating"
+    "photo about about about about"
+    "message price price price price"
   }
+
+  .photo {
+    height: 100%;
+    align-items: center;
+  }
+
+  #profile-photo {
+    margin: 10px 0 10px 10px;
+    width: 150px;
+    height: 150px;
+  }
+
+  .photo p {
+    display: flex;
+    font-size: 1.4rem;
+    float: left;
+    margin: 15px;
+    color: lightgray;
+    text-transform: uppercase;
+  }
+
+  .name {
+    justify-content: start;
+    background: rgb(240, 240, 240);
+  }
+
+  .name h1 {
+    margin-left: 10px;
+  }
+
+  .rating {
+    text-align: left;
+  }
+
+  .rating p:first-child {
+    margin: 20px 0 -30px 10px;
+  }
+
+  .rating p:last-child {
+    margin-left: 10px;
+    margin-bottom: 5px;
+  }
+
+  .price {
+    text-align: left;
+    margin-left: 5px;
+  }
+
+  .price h2 {
+    font-size: 2rem;
+  }
+
+  .price p {
+    font-size: 1rem;
+  }
+
+.about {
+    display: flex;
+    font-size: 1.8rem;
+    font-weight: 200;
+    grid-area: about;
+    padding: 0;
+}
+
+.about p {
+    margin-left: 10px;
+}
+
+.message {
+    font-size: 5rem;
+}
+
+.vl {
+    margin-top: 15px;
+    border-left: 4px solid #66d189;
+    height: 65px;
+}
+
+.phone, 
+.text {
+    text-align: center;
+    justify-items: center;
+    margin-top: 0;
+    font-size: 5rem;
+    width: 50%;
+}
+
 }
