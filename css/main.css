@@ -31,9 +31,10 @@ main {
   background: white;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 2fr 1fr 1.4fr 1fr;
+  grid-template-rows: 2fr 50px 1fr 1.4fr 1fr;
   grid-template-areas:
   "photo"
+  "name"
   "rating"
   "price"
   "message"
@@ -49,24 +50,27 @@ main {
   font-size: 1.4rem;
   float: right;
   text-align: right;
-  margin-right: 10px;
-  margin-top: 0;
+  margin-right: 15px;
+  margin-top: -15px;
   color: lightgray;
   text-transform: uppercase;
 }
 
-.photo h1 {
-  font-size: 3rem;
-  margin-bottom: 0
-}
-
 #profile-photo {
-  margin: 12px 0 -12px 60px;
-  width: 120px;
-  height: 120px;
+  margin: 12px 0 -12px 65px;
+  width: 140px;
+  height: 140px;
   object-fit: cover;
   border-radius: 50%;
   border: 3px solid #66d189;
+}
+
+.name {
+  display: flex;
+  grid-area: name;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 2rem;
 }
 
 .rating {
@@ -130,7 +134,19 @@ main {
 
 
 @media only screen and (min-width: 1024px) {
-  body {
-   background: white;
+  
+  main {
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 400px;
+    background: white;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 3fr 1fr;
+    grid-template-areas:
+    "photo" "photo"
+    "photo" "photo"
+    "message" "message"
   }
 }
