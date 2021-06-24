@@ -187,44 +187,47 @@ main {
   .name {
     justify-content: start;
     background: rgb(240, 240, 240);
+    margin: 0 0;
   }
 
   .name h1 {
-    margin-left: 10px;
+    margin-bottom: -.4rem;
+    margin-left: 2rem;
   }
 
   .rating {
     text-align: left;
   }
 
-  .rating p:first-child {
-    margin: 20px 0 -30px 10px;
-  }
-
   .rating p:last-child {
-    margin-left: 10px;
+    margin-left: 2rem;
     margin-bottom: 5px;
   }
 
   .price {
     text-align: left;
-    margin-left: 5px;
+    background:rgb(240, 240, 240);
   }
 
   .price h2 {
     font-size: 2rem;
+    margin-left: 2rem;
   }
 
   .price p {
     font-size: 1rem;
   }
 
+  .stars {
+    padding-left: 20px;
+  }
+
 .about {
     display: flex;
     font-size: 1.8rem;
-    font-weight: 200;
     grid-area: about;
     padding: 0;
+    background:rgb(240, 240, 240);
 }
 
 .about p {
@@ -236,8 +239,9 @@ main {
 }
 
 .vl {
-    margin-top: 15px;
-    border-left: 4px solid #66d189;
+    margin-top: 20px;
+    margin-left: 20px;
+    border-left: 3px solid #66d189;
     height: 65px;
 }
 
