@@ -13,22 +13,22 @@ html {
 }
   
 body {
+    align-items: center;
     background-color: #0f5f60;
+    display: flex;
     font-family: 'Open Sans', sans-serif;
+    justify-content: center;
     margin: 0;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 main {
-  justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 600px;
   background: white;
   display: grid;
+  height: 600px;
+  justify-content: center;
+  width: 400px;
   grid-template-columns: 1fr;
   grid-template-rows: 2fr 50px 1fr 1.4fr 1fr;
   grid-template-areas:
@@ -41,51 +41,51 @@ main {
 
 .photo {
   background: white;
-  text-align: center;
   grid-area: photo;
+  text-align: center;
 }
 
 .photo p {
-  font-size: 1.4rem;
-  float: right;
-  text-align: right;
-  margin-right: 15px;
-  margin-top: -15px;
   color: lightgray;
+  float: right;
+  font-size: 1.4rem;
+  margin-right: 1.5rem;
+  margin-top: -1.5rem;
+  text-align: right;
   text-transform: uppercase;
 }
 
 #profile-photo {
-  margin: 10px 0 -12px 70px;
-  width: 140px;
-  height: 140px;
-  object-fit: cover;
   border-radius: 50%;
   border: 3px solid #66d189;
+  height: 140px;
+  margin: 1rem 0 -1.2rem 7rem;
+  object-fit: cover;
+  width: 140px;
 }
 
 .name {
   display: flex;
+  font-size: 2rem;
   grid-area: name;
   justify-content: center;
-  margin-bottom: 10px;
-  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .rating {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
   background: rgb(240, 240, 240);
+  display: flex;
+  flex-direction: column;
   font-size: 2.4rem;
-  text-align: center;
   grid-area: rating;
+  height: 100%;
+  text-align: center;
 }
 
 .stars {
   color: #f7dd2e;
-  margin-top: 15px;
-  margin-bottom: -16px;
+  margin-bottom: -1.6rem;
+  margin-top: 1.5rem;
 }
 
 #star-outline {
@@ -94,46 +94,46 @@ main {
 
 .rating p:first-child {
   font-weight: 200;
-  margin: 10px 0 -15px 0;
+  margin: 1rem 0 -1.5rem 0;
 }
 
 .about {
-  display:none;
+  display: none;
 }
 
 .price {
   background: white;
   display: flex;
   flex-direction: column;
-  text-align: center;
   grid-area: price;
+  text-align: center;
 }
 
 .price h2 {
   font-size: 3rem;
-  margin-bottom: 0;
+  margin-bottom: -1rem;
 }
 
 .price p {
   font-size: 2.5rem;
   font-weight: 200;
-  margin-top: -15px;
+  margin-top: -1.5rem;
 }
 
 .message {
   display: flex;
-  height: 100%;
-  grid-area: message;
   font-size: 4rem;
+  grid-area: message;
+  height: 100%;
 }
 
 .phone, 
 .text {
-  text-align: center;
   align-content: center;
-  font-size: 6.5rem;
-  width: 50%;
   color: white;
+  font-size: 6.5rem;
+  text-align: center;
+  width: 50%;
 }
 
 .phone {
@@ -144,17 +144,16 @@ main {
   background: #5abd7c;
 }
 
-
-
 @media only screen and (min-width: 1024px) {
   
   main {
-    justify-content: center;
     align-items: center;
-    width: 600px;
-    height: 350px;
     background: white;
     display: grid;
+    height: 350px;
+    justify-content: center;
+    width: 600px;
+
     grid-template-columns: 2.5fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     grid-template-areas:
@@ -164,74 +163,77 @@ main {
     "message price price price price"
   }
 
-  .photo {
+.photo {
     height: 100%;
     align-items: center;
-  }
+}
 
-  #profile-photo {
-    margin: 10px 0 10px 10px;
-    width: 150px;
+#profile-photo {
     height: 150px;
-  }
+    margin: 1rem 0 1rem 1rem;
+    width: 150px;
+}
 
-  .photo p {
-    display: flex;
-    font-size: 1.4rem;
-    float: left;
-    margin: 15px;
+.photo p {
     color: lightgray;
+    display: flex;
+    float: left;
+    font-size: 1.4rem;
+    margin: 1.5rem;
     text-transform: uppercase;
-  }
+}
 
-  .name {
-    justify-content: start;
+.name {
     background: rgb(240, 240, 240);
+    justify-content: start;
     margin: 0 0;
-  }
+}
 
-  .name h1 {
+.name h1 {
     margin-bottom: -.4rem;
     margin-left: 2rem;
-  }
+}
 
-  .rating {
+.rating {
     text-align: left;
-  }
+}
 
-  .rating p:last-child {
+.rating p:last-child {
     margin-left: 2rem;
     margin-bottom: 5px;
-  }
+}
 
-  .price {
-    text-align: left;
+.price {
     background:rgb(240, 240, 240);
-  }
+    height: 100%;
+    justify-content: center;
+    text-align: left;
+}
 
-  .price h2 {
-    font-size: 2rem;
+.price h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
     margin-left: 2rem;
-  }
+}
 
-  .price p {
+.price p {
     font-size: 1rem;
-  }
+}
 
-  .stars {
-    padding-left: 20px;
-  }
+.stars {
+    padding-left: 2rem;
+}
 
 .about {
+    background:rgb(240, 240, 240);
     display: flex;
     font-size: 1.8rem;
     grid-area: about;
     padding: 0;
-    background:rgb(240, 240, 240);
 }
 
 .about p {
-    margin-left: 10px;
+    margin-left: 1rem;
 }
 
 .message {
@@ -239,18 +241,18 @@ main {
 }
 
 .vl {
-    margin-top: 20px;
-    margin-left: 20px;
     border-left: 3px solid #66d189;
-    height: 65px;
+    height: 6rem;
+    margin-left: 2rem;
+    margin-top: 2.5rem;
 }
 
 .phone, 
 .text {
-    text-align: center;
+    font-size: 5rem;
     justify-items: center;
     margin-top: 0;
-    font-size: 5rem;
+    text-align: center;
     width: 50%;
 }
 
